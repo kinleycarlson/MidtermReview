@@ -7,6 +7,17 @@ Years of service: 2 years
 Current pay: $100,000
 
 '''
+infile = open('csvFile.csv','r')
+csvfile = csv.reader(infile, delimiter = ',')
+next(csvfile)
+
+for record in csvfile:
+    print('Employee Name:',record[0])
+    print('Years of Servive:', record[1],' years')
+    print('Current pay: $',record[2],sep='')
+
+    input()
+
 
 # 2) create a new csv file called 'wacoRestaurants.csv' using the dictionary. Make a header "Restaurant,Rating"
 restaurants = {
